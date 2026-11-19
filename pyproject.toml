@@ -1,0 +1,22 @@
+[project]
+name = "claude-safe-usage-guide"
+version = "0.1.0"
+description = "Claude Desktop と Claude Code を業務で安全に使うためのガイドと設定のひな形"
+requires-python = ">=3.12,<3.14"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "W"]
